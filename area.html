@@ -1,105 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Area | Cooperative Surgical Robots</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        body {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-            background-color: #f8f9fa;
-            color: #2c3e50;
-        }
-        /* 页面标题 */
-        .page-title {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 30px;
-            color: #1a237e;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-        }
-        /* 研究卡片容器 */
-        .research-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-        /* 研究图片 */
-        .research-img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-        /* 内容区域 */
-        .research-content {
-            padding: 25px;
-        }
-        .research-title {
-            font-size: 22px;
-            color: #2d3436;
-            margin-bottom: 15px;
-        }
-        .research-desc {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        /* 论文链接按钮 */
-        .paper-link {
-            display: inline-block;
-            padding: 10px 22px;
-            background-color: #1a237e;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
-        .paper-link:hover {
-            background-color: #283593;
-        }
-        /* 移动端适配 */
-        @media (max-width: 768px) {
-            .research-img { height: 260px; }
-            .page-title { font-size: 24px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Areas</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+body{
+  background:#f7f8fa;
+  padding:40px 20px;
+  max-width:920px;
+  margin:0 auto;
+}
+.section-title{
+  font-size:28px;
+  font-weight:600;
+  margin-bottom:30px;
+  color:#222;
+  text-align:center;
+}
+.card{
+  background:white;
+  border-radius:16px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.07);
+  overflow:hidden;
+  margin-bottom:40px;
+}
+.img-box img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+.content{
+  padding:30px;
+}
+.num-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.num{
+  width:32px;
+  height:32px;
+  background:#2962ff;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  flex-shrink:0;
+}
+.area-name{
+  font-size:22px;
+  font-weight:600;
+  color:#222;
+}
+.desc{
+  font-size:16px;
+  line-height:1.7;
+  color:#555;
+  margin-bottom:22px;
+  text-align:justify;
+}
+.paper-box{
+  border-top:1px solid #eee;
+  padding-top:20px;
+}
+.paper-title{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:6px;
+  color:#222;
+}
+.authors{
+  font-size:15px;
+  color:#666;
+  margin-bottom:16px;
+}
+.paper-link{
+  display:inline-block;
+  padding:10px 20px;
+  background:#2962ff;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.2s;
+}
+.paper-link:hover{
+  background:#1946d0;
+}
+</style>
 </head>
-<body>
-    <h2 class="page-title">My Research Area</h2>
 
-    <div class="research-card">
-        <!-- 1. 研究图片 → 替换为你的图片链接/本地图片 -->
-        <img src="https://via.placeholder.com/900x380/1a237e/ffffff?text=AI+Cooperative+Surgical+Robots" 
-             class="research-img" alt="Cooperative Surgical Robots">
-        
-        <div class="research-content">
-            <!-- 2. 研究领域标题 -->
-            <h3 class="research-title">AI-Enabled Cooperative Surgical Robots</h3>
-            
-            <!-- 3. 研究介绍（你提供的200词精简版内容） -->
-            <p class="research-desc">
-                Cooperative surgical robots represent an emerging paradigm in robotic-assisted surgery, offering superior flexibility and accessibility unmatched by conventional fixed-base systems. Unlike bulky, OR-confined traditional robots, they are compact and mobile, enabling deployment across operating rooms, clinics, and field hospitals. They can autonomously perform routine low-risk tasks such as instrument handover, camera repositioning, tissue retraction, and port-site suturing after minimally invasive surgery, easing surgeons’ workload and improving clinical outcomes. This research develops the first AI-powered cooperative surgical robot, integrating visual-language reasoning, high-fidelity world modeling, sim-to-real learning, and safety-assured control to expand robotic assistance in diverse healthcare settings.
-            </p>
-            
-            <!-- 4. 论文链接 → 替换为你的论文地址 -->
-            <a href="https://your-paper-link.com" target="_blank" class="paper-link">View Full Paper</a>
-        </div>
+<body>
+
+<h2 class="section-title">Research Areas</h2>
+
+<!-- 1. Cooperative Surgical Robots -->
+<div class="card">
+  <div class="img-box">
+    <img src="https://via.placeholder.com/920x320/2962ff/ffffff?text=1+Cooperative+Surgical+Robots" alt="Research 1">
+  </div>
+  <div class="content">
+    <div class="num-title">
+      <div class="num">1</div>
+      <h3 class="area-name">AI-Enabled Cooperative Surgical Robots</h3>
     </div>
+    <p class="desc">
+      Cooperative surgical robots represent an emerging paradigm in robotic-assisted surgery, offering superior flexibility and accessibility over traditional fixed-base systems. Compact and mobile, they can be deployed across operating rooms, clinics, and field hospitals. They autonomously perform routine low-risk tasks such as instrument handover, camera repositioning, tissue retraction, and port-site suturing, reducing surgeon workload and improving clinical outcomes.
+    </p>
+    <div class="paper-box">
+      <p class="paper-title">Paper: AI-Driven Cooperative Surgical Robots for Autonomous Intraoperative Tasks</p>
+      <p class="authors">Authors: Your Name, Co-Authors</p>
+      <a href="https://your-link.com" target="_blank" class="paper-link">View Paper</a>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Surgical Computer Vision -->
+<div class="card">
+  <div class="img-box">
+    <img src="https://via.placeholder.com/920x320/1976d2/ffffff?text=2+Surgical+Vision" alt="Research 2">
+  </div>
+  <div class="content">
+    <div class="num-title">
+      <div class="num">2</div>
+      <h3 class="area-name">Surgical Visual-Language Reasoning</h3>
+    </div>
+    <p class="desc">
+      This research focuses on real-time semantic understanding of surgical scenes through vision-language models. It enables the robot to recognize instruments, tissues, and surgical phases, supporting high-level task decision-making. By fusing visual perception and contextual reasoning, the system achieves safer and more reliable autonomous operation in complex operating room environments.
+    </p>
+    <div class="paper-box">
+      <p class="paper-title">Paper: Surgical Scene Understanding with Visual-Language Models</p>
+      <p class="authors">Authors: Your Name, Co-Authors</p>
+      <a href="https://your-link.com" target="_blank" class="paper-link">View Paper</a>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Sim-to-Real Learning -->
+<div class="card">
+  <div class="img-box">
+    <img src="https://via.placeholder.com/920x320/0277bd/ffffff?text=3+Sim-to-Real+Learning" alt="Research 3">
+  </div>
+  <div class="content">
+    <div class="num-title">
+      <div class="num">3</div>
+      <h3 class="area-name">Sim-to-Real Reinforcement Learning</h3>
+    </div>
+    <p class="desc">
+      This direction develops robust sim-to-real policy learning for surgical robots, enabling safe transfer of manipulation skills from simulation to real operating rooms. Combined with high-fidelity world modeling and safety-assured control, the framework reduces training costs and improves adaptability in diverse clinical scenarios.
+    </p>
+    <div class="paper-box">
+      <p class="paper-title">Paper: Sim-to-Real Transfer for Autonomous Surgical Manipulation</p>
+      <p class="authors">Authors: Your Name, Co-Authors</p>
+      <a href="https://your-link.com" target="_blank" class="paper-link">View Paper</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
