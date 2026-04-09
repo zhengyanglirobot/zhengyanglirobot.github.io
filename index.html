@@ -32,6 +32,63 @@
     <link rel="stylesheet" href="assets/css/academicons.css"/>
 
     <style>
+      /* 新闻模块容器 —— 独立滚动条核心 */
+.news-box {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* 标题 */
+.news-title {
+  padding: 10px 15px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 独立滚动条区域 ↓↓↓ 这是关键 */
+.news-list {
+  height: 300px;       /* 固定高度，超出就滚动 */
+  overflow-y: auto;    /* 自动出现独立滚动条 */
+  padding: 10px 15px;
+}
+
+/* 每条新闻 */
+.news-item {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+/* 日期 */
+.news-date {
+  width: 80px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 内容 */
+.news-content {
+  flex: 1;
+  font-size: 14px;
+  color: #222;
+}
+
+/* 美化滚动条（可选） */
+.news-list::-webkit-scrollbar {
+  width: 6px;
+}
+.news-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+.news-list::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer;
@@ -122,54 +179,35 @@
     <h2 style="text-align: center; font-size: 30px; margin-bottom: 40px; color: #222;">Lab News</h2>
     
       
-    <!-- 滚动区域 -->
-    <div class="news-scroll">
-        <ul class="news-list">
-            <li class="news-item">
-                <div class="news-date">[02/2026]</div>
-                <div class="news-content">
-                    Call for Papers for our new <em>IEEE TMI Special Issue</em> on <em>Large Multimodal and World Models for Medical Imaging</em> (DDL: August 1, 2026)
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[02/2026]</div>
-                <div class="news-content">
-                    To serve as <em>Workshop Chair</em> of MICCAI 2027; To serve as <em>Program Chair</em> of MICCAI 2028.
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[02/2026]</div>
-                <div class="news-content">
-                    Invited talk at <em>Surgical AI Days 2026</em>, Belgium.
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[02/2026]</div>
-                <div class="news-content">
-                    One paper accepted to <em>CVPR 2026</em> and one accepted to <em>CVPR Findings 2026</em>. One paper accepted to <em>MIDL 2026</em>. Congrats to Junyuan, Borui, Zhicheng, Yibing and all co-authors!
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[02/2026]</div>
-                <div class="news-content">
-                    Our paper <em>SurgRAW</em> about Agentic AI for Surgical Intelligence is accepted by <em>IEEE RA-L</em>. Congrats to Chang Han and all co-authors!
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[01/2026]</div>
-                <div class="news-content">
-                    Our paper <em>MedAgent-Pro</em> is accepted by <em>ICLR 2026</em>. Congrats to Ziyue and all co-authors!
-                </div>
-            </li>
-            <li class="news-item">
-                <div class="news-date">[01/2026]</div>
-                <div class="news-content">
-                    Invited talk at <em>AAAI 2026</em>, Bridge Program: AI for Medicine and Healthcare.
-                </div>
-            </li>
-            <!-- 可继续添加更多新闻项 -->
-        </ul>
+   <!-- 新闻模块 -->
+<div class="news-box">
+  <div class="news-title">Recent News</div>
+  <div class="news-list">
+    <div class="news-item">
+      <div class="news-date">[02/2026]</div>
+      <div class="news-content">Paper accepted by CVPR 2026</div>
     </div>
+    <div class="news-item">
+      <div class="news-date">[02/2026]</div>
+      <div class="news-content">Invited talk at Surgical AI Days 2026</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">[01/2026]</div>
+      <div class="news-content">Paper accepted by ICLR 2026</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">[12/2025]</div>
+      <div class="news-content">Joined the program committee of MICCAI 2027</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">[11/2025]</div>
+      <div class="news-content">New paper on medical world model</div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">[10/2025]</div>
+      <div class="news-content">Invited speaker at AAAI 2026</div>
+    </div>
+  </div>
 </div>
         
 </section>
